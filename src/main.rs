@@ -22,7 +22,13 @@ fn main() {
 
     // Strings vs String Slices (&str)
     // Strings [growable, mutable, owned string type]
-    
+    let mut stone_cold: String = String::from("Hell, ");
+    stone_cold.push_str("Shekpeee");
 
-    println!("{:?}", number_slice);
+    // &str (String Slice)
+    let string : String  = String::from("Hello, World");
+    let slice: &str = &string[1..5];
+
+    println!("Slice Value: {}", slice);
+
 }
