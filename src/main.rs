@@ -4,6 +4,8 @@
 // Compound Data Types
 //arrays, tuples, slices, strings
 
+mod functions;
+
 fn main() {
     let x: i32 = -80;
     let y: u64 = 80;
