@@ -1,5 +1,18 @@
 struct BankAccount{
-    
+    owner: String,
+    balance: f64,
+}
+
+impl BankAccount {
+    fn withdraw(&mut self, amount:f64){
+        println!("Withdrawing {} from account owned by {}", amount, self.owner);
+        self.balance -= amount;
+    }
+
+    fn check_balance(&self){
+        println!("Account owned by {} has a balance of ${}", self.owner, self.balance);
+        // return self.balance;
+    }
 }
 
 fn main() {
@@ -15,6 +28,19 @@ fn main() {
     let y = add(4, 6);
     println!("{}", y);
     immutability();
+    let mut account = BankAccount{
+        owner: "Favour".to_string(),
+        balance: 1000.00
+    };
+
+    //Immutable borrow
+    account.check_balance();
+
+    //Mutable borrow
+    account.withdraw(300.00);
+
+    account.check_balance();
+
 }
 
 fn hello_world(){
