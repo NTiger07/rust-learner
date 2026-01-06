@@ -31,6 +31,11 @@ fn main() {
     let string : String  = String::from("Hello, World");
     let slice: &str = &string[1..5];
 
-    println!("Slice Value: {}", slice);
+
+    // conditional variables
+    let condition: bool = true;
+    let number:i32 = if condition {5} else {6};
+
+    println!("Number: {}", number);
 
 }

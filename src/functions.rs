@@ -19,12 +19,12 @@ fn main() {
     hello_world();
     tell_height(65);
     human_id("Favour", 20, 160.1234);
-    let _X = {
+    let x = {
         let price: u32 = 5;
         let qty: u32 = 10;
         price * qty
     };
-    println!("Result is {}", _X);
+    println!("Result is {}", x);
     let y = add(4, 6);
     println!("{}", y);
     immutability();
@@ -40,6 +40,9 @@ fn main() {
     account.withdraw(300.00);
 
     account.check_balance();
+
+    is_adult(17);
+    is_adult(23);
 
 }
 
@@ -67,4 +70,14 @@ fn immutability(){
     *_r -= 3;
 
     println!("Value of _r: {}", _r);
+}
+
+fn is_adult(age: u16) {
+    const AGE: u16 = 18;
+
+    if age >= AGE {
+        println!("Is adult")
+    } else {
+        println!("Not adult")
+    }
 }
