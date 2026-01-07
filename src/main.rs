@@ -6,6 +6,7 @@
 
 mod functions;
 mod loops;
+mod structs;
 
 fn main() {
     let x: i32 = -80;
@@ -18,15 +19,15 @@ fn main() {
     let fruits: [&str; 3] = ["Apple", "Orange", "Mango"];
 
 
-    let human: (&str, i32, bool)= ("Alice", 30, false);
+    let human: (&str, i32, bool)= ("Alice", 30, false); // Tuples
 
     //Slices: contiguous
     let number_slice:&[i32;5] = &[1,2,3,4,5];
 
     // Strings vs String Slices (&str)
     // Strings [growable, mutable, owned string type]
-    let mut stone_cold: String = String::from("Hell, ");
-    stone_cold.push_str("Shekpeee");
+    let mut stone_cold: String = String::from("Another, ");
+    stone_cold.push_str("banger!!!");
 
     // &str (String Slice)
     let string : String  = String::from("Hello, World");
