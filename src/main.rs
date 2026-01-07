@@ -5,6 +5,7 @@
 //arrays, tuples, slices, strings
 
 mod functions;
+mod loops;
 
 fn main() {
     let x: i32 = -80;
