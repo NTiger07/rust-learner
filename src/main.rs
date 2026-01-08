@@ -9,6 +9,7 @@ mod loops;
 mod structs;
 mod enums;
 mod error_handling;
+mod collection_types;
 
 fn main() {
     let x: i32 = -80;
